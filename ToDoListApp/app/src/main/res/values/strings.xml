@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">To-Do List App</string>
+    <string name="hello">Hello 👋</string>
+    <string name="ready_to_do_your">Ready to do your</string>
+    <string name="daily_tasks">Daily Tasks!</string>
+    <string name="today_s">Today\'s</string>
+    <string name="ready_to_do_your_n_daily_tasks">Ready to do your \n Daily Tasks ?</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="no_tasks_found">No Tasks found</string>
+    <string name="tasks">Tasks</string>
+</resources>

@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ToDoListApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/primary</item>
+    </style>
+
+    <style name="todo_card_bg">
+        <item name="android:background">#D50B0B</item>
+    </style>
+
+    <style name="Theme.ToDoListApp" parent="Base.Theme.ToDoListApp" />
+
+    <style name="input">
+        <item name="android:background">@drawable/rectangle_input</item>
+    </style>
+</resources>

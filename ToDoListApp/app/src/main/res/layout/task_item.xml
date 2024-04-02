@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.zerobranch.layout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:draggedItem="@id/card"
+    app:leftItem="@id/left"
+    app:swipeDirection="right">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="20dp"
+        android:padding="10dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_rounded_left"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="50dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#CC0808"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        style="@style/todo_card_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:contentPadding="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/vertical_line"
+                android:layout_width="4dp"
+                android:layout_height="100dp"
+                android:background="@color/primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/todo_title_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@id/todo_title_text"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/todo_disc_text"
+                app:layout_constraintEnd_toStartOf="@id/todo_check"
+                app:layout_constraintStart_toEndOf="@id/vertical_line"
+                tools:text="Play Basketball" />
+
+            <TextView
+                android:id="@+id/todo_disc_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/poppins_"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/todo_check"
+                app:layout_constraintStart_toEndOf="@id/vertical_line"
+                app:layout_constraintTop_toBottomOf="@id/todo_title_text"
+                tools:text="Play Basketball" />
+
+            <TextView
+                android:id="@+id/todo_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20sp"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                android:layout_marginTop="20dp"
+                app:drawableStartCompat="@drawable/ic_clock"
+                app:layout_constraintEnd_toStartOf="@id/todo_check"
+                app:layout_constraintStart_toEndOf="@id/vertical_line"
+                app:layout_constraintTop_toBottomOf="@id/todo_title_text"
+                tools:text="10 : 30 PM" />
+
+            <ImageView
+                android:id="@+id/todo_check"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_check_bg"
+                android:paddingHorizontal="2dp"
+                android:paddingVertical="10dp"
+                android:src="@drawable/ic_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</com.zerobranch.layout.SwipeLayout>
